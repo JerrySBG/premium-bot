@@ -7,7 +7,7 @@ IVAR="/etc/http-instas"
 source <(curl -sSL https://raw.githubusercontent.com/JerrySBG/premium-bot/main/Otros/msg) >/dev/null
 #!/bin/bash
 # menu maker (opciones 1, 2, 3,.....)
-flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && cG='/c' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && _kl1='ghkey' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && kL10='tc' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && am1='/e' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•' nib="${am1}${kL10}"
+flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► ⚜️' && cG='/c' && TTfin='⚜️ ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && _kl1='ghkey' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && kL10='tc' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && am1='/e' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•' nib="${am1}${kL10}"
 cOpyRig='©' && mbar2=' •••••••••••••••••••••••'
 
 menu_func() {
@@ -31,7 +31,7 @@ selection_fun() {
     local range
     for ((i = 0; i <= $1; i++)); do range[$i]="$i "; done
     while [[ ! $(echo ${range[*]} | grep -w "$selection") ]]; do
-        echo -ne "\033[1;37m ► Opcion : " >&2
+        echo -ne "\033[1;37m ? Opcion : " >&2
         read selection
         tput cuu1 >&2 && tput dl1 >&2
     done
@@ -42,7 +42,7 @@ tittle() {
     [[ -z $1 ]] && rt='adm-lite' || rt='ADMcgh'
     clear && clear
     msg -bar
-    echo -e "\033[1;44;44m   \033[1;33m=====>>►► 🐲 JerrySBG 💥 Plus 🐲 ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
+    echo -e "\033[1;44;44m   \033[1;33m=====>>►► ⚜️ JerrySBG 💥 Plus ⚜️ ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
     msg -bar
 }
 in_opcion() {
@@ -93,7 +93,7 @@ title() {
 # finalizacion de tareas
 enter() {
     msg -bar
-    text="►► Presione enter para continuar ◄◄"
+    text="►► Presione ENTER para Continuar ◄◄"
     if [[ -z $1 ]]; then
         print_center -ama "$text"
     else
@@ -159,11 +159,11 @@ msg() {
     -blak2) cor="${COLOR[8]}" && echo -e "${cor}${2}${SEMCOR}" ;;
     -blu) cor="${COLOR[9]}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}" ;;
     -blu1) cor="${COLOR[9]}" && echo -e "${cor}${2}${SEMCOR}" ;;
-    -bar) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
-    -bar1) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
-    -bar2) ccor="${COLOR[1]}========================================================" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
-    -bar3) ccor="${COLOR[3]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
-    -bar4) ccor="${COLOR[5]}••••••••••••••••••••••••••••••••••••••••••••••••••••••••" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar1) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar2) ccor="${COLOR[1]}=====================================================" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar3) ccor="${COLOR[3]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar4) ccor="${COLOR[5]}•••••••••••••••••••••••••••••••••••••••••••••••••" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
     esac
 }
 
@@ -261,7 +261,7 @@ ports_() {
         else
         echo -e "\033[0;36m   Keygen: \033[0;35m[\033[0;31m OFF \033[0;35m]"
         fi)
-    [[ $v1 = $v2 ]] && vesaoSCT="\033[1;32m${txt[315]} \033[0;33m ($v2)" || vesaoSCT="\033[1;31m${txt[316]}\033[0;33m($v2) �72 \033[1;32m($v1)\033[1;31m"
+    [[ $v1 = $v2 ]] && vesaoSCT="\033[1;32m${txt[315]} \033[0;33m ($v2)" || vesaoSCT="\033[1;31m${txt[316]}\033[0;33m($v2)  72 \033[1;32m($v1)\033[1;31m"
     echo -e "  ${cor[2]} ${vesaoSCT} ${cor[0]}"
     msg -bar
     echo -e "\033[1;34m ${TOP}\033[1;31m TOTAL:\033[1;32m "$mt "\033[1;34m ${TOP} \033[1;31m Libre:\033[1;32m "$ram2 "\033[1;34m ${TOP} \033[1;31m Usada:\033[1;32m"$ram3
@@ -699,7 +699,7 @@ act_botgen() {
         [[ -e $HOME/Backup/num-key.cont ]] && mv $HOME/Backup/num-key.cont /etc/ADM-db/num-key.cont
     ) && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [SIN DATOS]"
     rm -rf /root/Backup
-    [[ ! -e ${CIDdir}/resell ]] && echo "@Premium" > ${CIDdir}/resell
+    [[ ! -e ${CIDdir}/resell ]] && echo "@Jerry_SBG" > ${CIDdir}/resell
     [[ ! -e $(cat < /etc/mpayu) ]] && echo "Paypal : @GregoriaMortera" > /etc/mpayu && echo "529241293310" > /etc/numctc
     rm $HOME/lista-arq &>/dev/null
     systemctl restart BotGen-server &>/dev/null
