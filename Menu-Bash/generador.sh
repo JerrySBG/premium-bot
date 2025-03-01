@@ -277,7 +277,7 @@ SCPT_DIR="/etc/SCRIPT"
 [[ ! -e ${SCPT_DIR} ]] && bash /bin/ejecutar/echo-ram.sh
 DIR="/etc/http-shell"
 LIST="-YRR3J"
-wget -O /bin/ejecutar/v-new.log https://raw.githubusercontent.com/emirjorge/premium/master/premium/v-local.log &>/dev/null
+wget -O /bin/ejecutar/v-new.log https://raw.githubusercontent.com/JerrySBG/premium-bot/main/v-local.log &>/dev/null
 v1=$(cat /bin/ejecutar/v-new.log)
 v2=$(cat <${SCPT_DIR}/v-local.log)
 txt[315]=" ${FlT} JerrySBG Keygen ${FlT} IS UPDATED!"
